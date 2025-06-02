@@ -3,7 +3,7 @@ ctx <- NULL
 
 .onLoad <- function(libname, pkgname){
   ctx <<- V8::v8()
-  wd <- setwd(system.file('js', package = 'tomledit'))
+  wd <- setwd(system.file('js', package = 'tomleditjs'))
   on.exit(setwd(wd))
   ctx$source('encoding-indexes.min.js')
   ctx$source('encoding.min.js')

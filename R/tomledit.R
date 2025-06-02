@@ -5,8 +5,8 @@
 #'
 #' @references [toml-edit-js examples](https://github.com/rainbowatcher/toml-edit-js/blob/main/tests/edit.test.ts)
 #' @export
-#' @name tomledit
-#' @rdname tomledit
+#' @name tomleditjs
+#' @rdname tomleditjs
 #' @param toml string with toml text
 #' @param file path to file with toml text
 #' @param as_json return output as json string instead of R list
@@ -15,7 +15,7 @@ read_toml <- function(file, as_json = FALSE){
 }
 
 #' @export
-#' @rdname tomledit
+#' @rdname tomleditjs
 parse_toml <- function(toml, as_json = FALSE){
   toml <- read_input(toml)
   ctx$assign('input', toml)
@@ -27,7 +27,7 @@ parse_toml <- function(toml, as_json = FALSE){
 }
 
 #' @export
-#' @rdname tomledit
+#' @rdname tomleditjs
 #' @param toml string
 #' @param x vector or json string to convert to TOML
 #' @param auto_unbox convert atomic vectors of length 1 as scalars in TOML, unless
@@ -41,7 +41,7 @@ write_toml <- function(x, auto_unbox = TRUE){
 }
 
 #' @export
-#' @rdname tomledit
+#' @rdname tomleditjs
 #' @param field name of field to change, for example `package.version`.
 #' @param value new value of field to set.
 #' @examples

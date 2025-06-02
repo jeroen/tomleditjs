@@ -1,4 +1,4 @@
-Package: tomledit
+Package: tomleditjs
 Type: Package
 Title: Modify TOML config files
 Version: 0.1.0
