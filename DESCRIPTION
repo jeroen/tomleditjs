@@ -1,0 +1,13 @@
+Package: tomledit
+Type: Package
+Title: Modify TOML config files
+Version: 0.1.0
+Authors@R: person("Jeroen", "Ooms", email = "jeroenooms@gmail.com", role = c("aut", "cre"))
+Description: Bindings to toml-edit to work with TOML data preserving comments and whitespace.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Imports: 
+  jsonlite,
+  V8
+RoxygenNote: 7.3.2
+Roxygen: list(markdown = TRUE)
