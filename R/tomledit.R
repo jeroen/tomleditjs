@@ -37,7 +37,7 @@ write_toml <- function(x, auto_unbox = TRUE){
     x <- jsonlite::toJSON(x, auto_unbox = TRUE)
   }
   ctx$assign('input', x)
-  ctx$eval('toml_edit.stringify(JSON.parse(input))')
+  as_toml(ctx$eval('toml_edit.stringify(JSON.parse(input))'))
 }
 
 #' @export
@@ -54,11 +54,20 @@ edit_toml <- function(toml, field, value){
   ctx$assign('input', toml)
   ctx$assign('field', field)
   ctx$assign('value', value)
-  ctx$eval('toml_edit.edit(input, field, value)')
+  as_toml(ctx$eval('toml_edit.edit(input, field, value)'))
 }
-
 
 read_input <- function(toml){
   stopifnot(is.character(toml))
   paste(toml, collapse = '\n')
+}
+
+as_toml <- function(x){
+  class(x) <- 'toml'
+  x
+}
+
+#' @export
+print.toml <- function (x, ...) {
+  cat(x, "\n")
 }
