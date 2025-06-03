@@ -11,3 +11,4 @@ Imports:
   V8
 RoxygenNote: 7.3.2
 Roxygen: list(markdown = TRUE)
+Remotes: jeroen/V8
