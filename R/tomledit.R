@@ -50,6 +50,9 @@ write_toml <- function(x, auto_unbox = TRUE){
 #' toml <- edit_toml(toml, 'workspace.dependencies.bla', list(path = "./yolo", rev = "123"))
 edit_toml <- function(toml, field, value){
   toml <- read_input(toml)
+  if(is.null(value)){
+    value <- V8::JS("null")
+  }
   stopifnot(is.character(field) && length(field) == 1)
   ctx$assign('input', toml)
   ctx$assign('field', field)
