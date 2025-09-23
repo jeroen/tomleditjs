@@ -1,0 +1,16 @@
+{
+  "name": "tomleditjs-r",
+  "version": "1.0.0",
+  "description": "",
+  "license": "MIT",
+  "author": "",
+  "type": "module",
+  "main": "toml-edit-js.js",
+  "dependencies": {
+    "@rainbowatcher/toml-edit-js": "^0.6.2",
+    "esbuild": "^0.25.10"
+  },
+  "scripts": {
+    "build": "esbuild toml-edit-js.js --minify --bundle --platform=neutral --format=iife --outfile=../inst/js/toml-edit-js.min.js && cp node_modules/@rainbowatcher/toml-edit-js/dist/index_bg.wasm ../inst/js/index_bg.wasm"
+  }
+}

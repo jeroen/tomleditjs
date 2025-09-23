@@ -22,3 +22,4 @@ bugs
 ^configure.log$
 ^src/ada
 ^\.deps$
+^js$

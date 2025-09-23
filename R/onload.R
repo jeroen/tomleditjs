@@ -9,7 +9,7 @@ ctx <- NULL
   ctx$source('encoding.min.js')
   blob <- readBin('index_bg.wasm', raw(), 1e6)
   ctx$assign('bytes', blob)
-  ctx$eval('let module = new WebAssembly.Module(bytes);')
-  ctx$source('bindings.js')
+  ctx$eval('var module = new WebAssembly.Module(bytes);')
+  ctx$source('toml-edit-js.min.js')
   ctx$eval('load_toml_edit_module(module)', await = TRUE)
 }
