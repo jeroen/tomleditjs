@@ -8,6 +8,6 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 Imports: 
   jsonlite,
-  V8
+  V8 (>= 8.0.1)
 RoxygenNote: 7.3.2
 Roxygen: list(markdown = TRUE)
