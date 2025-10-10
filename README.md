@@ -9,7 +9,7 @@ Allows for modifying TOML data while preserving order, comments and whitespace.
 Installation requires no compilation:
 
 ```
-pak::pak("jeroen/tomleditjs")
+pak::pak("jeroen/toml")
 ```
 
 ## Example

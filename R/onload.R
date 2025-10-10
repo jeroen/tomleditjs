@@ -3,7 +3,7 @@ ctx <- NULL
 
 .onLoad <- function(libname, pkgname){
   ctx <<- V8::v8()
-  wd <- setwd(system.file('js', package = 'tomleditjs'))
+  wd <- setwd(system.file('js', package = 'toml'))
   on.exit(setwd(wd))
   blob <- readBin('index_bg.wasm', raw(), 1e6)
   ctx$assign('bytes', blob)
