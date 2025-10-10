@@ -1,15 +1,15 @@
 Package: toml
 Type: Package
-Title: Read, Write, and Modify TOML files
+Title: Read, Write, and Modify TOML Files
 Version: 0.1.0
 Authors@R: person("Jeroen", "Ooms", email = "jeroenooms@gmail.com", role = c("aut", "cre"))
-Description: Simple toolkit for parsing and generating TOML text. Based on 
-    tomledit which allows for modifying toml while preserving order, comments,
-    and whitespace.
+Description: Simple toolkit for working with TOML text. Based on tomledit which
+    allows for modifying TOML while preserving order, comments,and whitespace.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Imports: 
   jsonlite,
   V8 (>= 8.0.1)
+BugReports: https://github.com/jeroen/toml/issues
 RoxygenNote: 7.3.2
 Roxygen: list(markdown = TRUE)
