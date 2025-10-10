@@ -5,9 +5,9 @@ ctx <- NULL
   ctx <<- V8::v8()
   wd <- setwd(system.file('js', package = 'toml'))
   on.exit(setwd(wd))
-  blob <- readBin('index_bg.wasm', raw(), 1e6)
+  blob <- readBin('tomlr.wasm', raw(), file.info('tomlr.wasm')$size)
   ctx$assign('bytes', blob)
   ctx$eval('var module = new WebAssembly.Module(bytes);')
-  ctx$source('toml-edit-js.min.js')
+  ctx$source('tomlr.js')
   ctx$eval('load_toml_edit_module(module)', await = TRUE)
 }
