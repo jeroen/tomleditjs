@@ -6,10 +6,11 @@ Simple toolkit for parsing and generating TOML text. Based on
 [toml_edit](https://docs.rs/toml_edit/latest/toml_edit/) which 
 allows for modifying toml while preserving order, comments, and whitespace.
     
-Note that current we ship a [WebAssembly build](https://github.com/rainbowatcher/toml-edit-js) 
-of tomledit such that we do not have to compile from Rust in R, and things work
-on all platforms including WebR. If Rust becomes better supported on CRAN we 
-could interface the Rust crate directly.
+We currently use a [WebAssembly build](https://github.com/rainbowatcher/toml-edit-js) 
+of toml_edit such that we do not have to deal with Rust code in R and everything
+works without compilation on any platform, including WebR. When Rust becomes better
+supported on CRAN and WebR, we could consider binding to Rust directly, although 
+it does not make too much of a difference.
 
 
 ## Install

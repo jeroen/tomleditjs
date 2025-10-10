@@ -6,7 +6,7 @@
 \alias{parse_toml}
 \alias{write_toml}
 \alias{edit_toml}
-\title{Parse or Edit TOML files}
+\title{Parse or Edit TOML text}
 \usage{
 read_toml(file, as_json = FALSE)
 
@@ -32,9 +32,14 @@ they are wrapped in \code{I()}. See also \link[jsonlite:fromJSON]{jsonlite::toJS
 
 \item{value}{new value of field to set.}
 }
+\value{
+\code{parse_toml()} returns a list and \code{edit_toml()} returns the modified
+TOML text.
+}
 \description{
-The \code{toml_edit()} function modifies values in a TOML retaining order, comments,
-and whitespace.
+The \code{\link[=edit_toml]{edit_toml()}} function modifies values in a TOML text while retaining the
+order, comments, and whitespace. Use \code{read_toml()} and \code{write_toml()} to convert
+between TOML text and R lists.
 }
 \examples{
 toml <- readLines('https://raw.githubusercontent.com/posit-dev/air/refs/heads/main/Cargo.toml')

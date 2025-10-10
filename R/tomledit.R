@@ -1,10 +1,13 @@
-#' Parse or Edit TOML files
+#' Parse or Edit TOML text
 #'
-#' The `toml_edit()` function modifies values in a TOML retaining order, comments,
-#' and whitespace.
+#' The [edit_toml()] function modifies values in a TOML text while retaining the
+#' order, comments, and whitespace. Use `read_toml()` and `write_toml()` to convert
+#' between TOML text and R lists.
 #'
 #' @references [toml-edit-js examples](https://github.com/rainbowatcher/toml-edit-js/blob/main/tests/edit.test.ts)
 #' @export
+#' @return `parse_toml()` returns a list and `edit_toml()` returns the modified
+#' TOML text.
 #' @name toml
 #' @rdname toml
 #' @param toml string with toml text
