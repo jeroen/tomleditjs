@@ -1,8 +1,16 @@
-# Bindings to toml-edit
+# toml
 
-Experimental bindings to [a WebAssembly port](https://github.com/rainbowatcher/toml-edit-js) of the toml_edit Rust crate.
+> Read, Write, and Modify TOML files in R
 
-Allows for modifying TOML data while preserving order, comments and whitespace.
+Simple toolkit for parsing and generating TOML text. Based on 
+[toml_edit](https://docs.rs/toml_edit/latest/toml_edit/) which 
+allows for modifying toml while preserving order, comments, and whitespace.
+    
+Note that current we ship a [WebAssembly build](https://github.com/rainbowatcher/toml-edit-js) 
+of tomledit such that we do not have to compile from Rust in R, and things work
+on all platforms including WebR. If Rust becomes better supported on CRAN we 
+could interface the Rust crate directly.
+
 
 ## Install
 
